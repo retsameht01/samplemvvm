@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingHorizontal="10dp"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:paddingBottom="15dp">
+
+    <TextView
+        android:id="@+id/artist"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        tools:text ="Some Artist"
+        android:layout_marginTop="10dp" />
+
+    <TextView
+        android:id="@+id/track_name"
+        app:layout_constraintTop_toBottomOf="@id/artist"
+        app:layout_constraintStart_toStartOf="parent"
+        android:textSize="16sp"
+        tools:text ="A Nice Song"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:id="@+id/release_date"
+        android:textSize="12sp"
+        tools:text ="2010-02-12"
+        android:layout_marginTop="10dp"
+        android:textColor="@color/black"
+        app:layout_constraintTop_toBottomOf="@id/track_name"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:id="@+id/genre"
+        android:textSize="12sp"
+        tools:text ="Pop"
+        android:layout_marginTop="10dp"
+        android:textColor="@color/black"
+        app:layout_constraintTop_toBottomOf="@id/track_name"
+        app:layout_constraintLeft_toRightOf="@id/release_date"
+        android:layout_marginLeft="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+
+    <TextView
+        android:id="@+id/price"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        tools:text ="$12.99"
+        android:layout_marginTop="10dp"
+        android:textColor="@color/black"
+        app:layout_constraintTop_toBottomOf="@id/track_name"
+        app:layout_constraintLeft_toRightOf="@id/genre"
+        android:layout_marginLeft="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <ImageView
+        android:id="@+id/album_art"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:src="@drawable/ic_launcher_background"
+        android:layout_width="60dp"
+        android:layout_height="60dp"/>
+
+
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
