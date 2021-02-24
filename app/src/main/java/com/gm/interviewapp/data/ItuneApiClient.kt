@@ -1,10 +1,9 @@
 package com.gm.interviewapp.data
 
-import retrofit2.Response
 import retrofit2.http.GET
 import retrofit2.http.Query
 
 interface ItunesApiClient {
     @GET("search?")
-    suspend fun getSongsForArtist(@Query("term") artist: String): Response<SongsResponse>
+    suspend fun getSongsForArtist(@Query("term") artist: String): SongsResponse
 }
