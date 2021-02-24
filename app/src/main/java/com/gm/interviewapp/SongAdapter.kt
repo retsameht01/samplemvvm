@@ -30,6 +30,7 @@ class SongAdapter(private val songs: List<Song> ): RecyclerView.Adapter<Recycler
         private val trackTv: TextView = itemView.findViewById(R.id.track_name)
         private val releaseTv: TextView = itemView.findViewById(R.id.release_date)
         private val genreTv: TextView = itemView.findViewById(R.id.genre)
+        private val priceTv: TextView = itemView.findViewById(R.id.price)
         private val albumArt: ImageView = itemView.findViewById(R.id.album_art)
 
         fun bind(song: Song) {
@@ -37,6 +38,7 @@ class SongAdapter(private val songs: List<Song> ): RecyclerView.Adapter<Recycler
             trackTv.text = song.trackName
             releaseTv.text = song.releaseDate
             genreTv.text = song.primaryGenreName
+            priceTv.text= "$${song.trackPrice}"
 
             Glide.with(itemView.context).load(song.artworkUrl60)
                 .into(albumArt)
