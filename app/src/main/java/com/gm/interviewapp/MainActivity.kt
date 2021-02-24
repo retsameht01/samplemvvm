@@ -23,8 +23,8 @@ class MainActivity : AppCompatActivity() {
     private fun setupObservers() {
         viewModel.getSongs().observe(this, Observer { songs ->
             val adapter = SongAdapter(songs)
-            song_list.adapter = adapter
             song_list.layoutManager = LinearLayoutManager(this)
+            song_list.adapter = adapter
             lookup_progress.visibility = View.GONE
         })
     }
